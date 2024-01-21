@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import MyForm from "./components/form";
 
 export default function App() {
   const [datas, setDatas] = useState(null);
@@ -31,7 +32,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <FlatList
+      {/* <FlatList
         data={datas}
         renderItem={({ item }) => {
           return item.address.country === "USA" ? (
@@ -57,10 +58,13 @@ export default function App() {
               <Text>{item.companyName}</Text>
               <Text>{item.address.country}</Text>
             </SafeAreaView>
-          );
+          )
+
         }}
         showsVerticalScrollIndicator={false}
-      />
+      /> */}
+
+      <MyForm/>
     </View>
   );
 }
